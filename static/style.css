@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(-225deg, #231557 0%, #43107a 29%, #FF1361 100%);
+    font-family: Arial, sans-serif;
+}
+
+
+header,
+footer {
+    position: fixed;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+footer {
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* 确保canvas在其他内容下面 */
+}
+
+textarea {
+    resize: none;
+    width: 70%;
+    background-color: #333;
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 40px;
+    overflow: hidden;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#image-container {
+    position: fixed;
+    top: 50px;
+    bottom: 60px;
+    width: 100%;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.message-container {
+    background-color: #444;
+    /* 深色背景，容易区分 */
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* 确保内容不会溢出容器 */
+}
+
+.user-prompt,
+.ai-response {
+    margin: 5px 0;
+}
+
+.ai-image {
+    display: block;
+    /* 确保图像不会与文本在同一行 */
+    max-width: 100%;
+    /* 控制图像大小，使其不超出容器宽度 */
+    height: auto;
+    /* 保持图像的原始宽高比 */
+    margin: 5px 0;
+    /* 添加一些间距 */
+}
